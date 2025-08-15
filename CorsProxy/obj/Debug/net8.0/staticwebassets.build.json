@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "8ptTXY0iMaCvlO78MElqYNT7XvWB9lwFS2gcOygOIdo=",
+  "Source": "CorsProxy",
+  "BasePath": "_content/CorsProxy",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
