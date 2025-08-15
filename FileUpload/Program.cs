@@ -18,7 +18,7 @@ app.UseStaticFiles(new StaticFileOptions()
         context.Context.Response.Headers.Add("Expires", "-1");
     }
 });
-//app.UseStaticFiles();
+app.UseStaticFiles();
 
 app.UseRouting();
 
