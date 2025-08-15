@@ -1,0 +1,7 @@
+C:\Users\Admin\source\repos\FileUpload\FileUpload\obj\Release\net8.0\PubTmp\Out\FileUpload.exe
+C:\Users\Admin\source\repos\FileUpload\FileUpload\obj\Release\net8.0\PubTmp\Out\appsettings.Development.json
+C:\Users\Admin\source\repos\FileUpload\FileUpload\obj\Release\net8.0\PubTmp\Out\appsettings.json
+C:\Users\Admin\source\repos\FileUpload\FileUpload\obj\Release\net8.0\PubTmp\Out\FileUpload.dll
+C:\Users\Admin\source\repos\FileUpload\FileUpload\obj\Release\net8.0\PubTmp\Out\FileUpload.deps.json
+C:\Users\Admin\source\repos\FileUpload\FileUpload\obj\Release\net8.0\PubTmp\Out\FileUpload.runtimeconfig.json
+C:\Users\Admin\source\repos\FileUpload\FileUpload\obj\Release\net8.0\PubTmp\Out\FileUpload.pdb

@@ -1,0 +1,90 @@
+﻿@page
+@model PdfUploadApp.Pages.UploadModel
+@{
+    ViewData["Title"] = "Upload PDF";
+}
+<meta http-equiv="cache-control" content="no-cache" />
+<!-- Link to the external CSS file -->
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+    }
+
+    h2 {
+        color: #333;
+    }
+
+    form {
+        background: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    input[type="file"] {
+        margin: 10px 0;
+    }
+
+    button {
+        background-color: #28a745;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+    .error {
+        color: red;
+        margin-top: 10px;
+    }
+
+    .success {
+        color: green;
+        margin-top: 10px;
+    }
+
+    .latest-file {
+        margin-top: 20px;
+        padding: 10px;
+        background: #e9ecef;
+        border-radius: 5px;
+    }
+</style>
+
+<h2>Upload PDF</h2>
+
+<form method="post" enctype="multipart/form-data">
+    <div>
+        <label for="file">Select PDF file:</label>
+        <input type="file" id="file" name="file" accept=".pdf" required />
+    </div>
+    <button type="submit">Upload</button>
+</form>
+
+@if (!string.IsNullOrEmpty(Model.ErrorMessage))
+{
+    <div class="error">@Model.ErrorMessage</div>
+}
+
+@if (Model.UploadedFilePath != null)
+{
+        <div class="success">File uploaded successfully: <a target="_blank" href="@Model.UploadedFilePath">@Model.UploadedFilePath</a></div>
+}
+
+@if (Model.UploadedFiles.Any())
+{
+    var latestFile = Model.UploadedFiles.OrderByDescending(f => f.UploadDate).First();
+    <div class="latest-file">
+        <h3>Latest Uploaded File</h3>
+        <p>File Name: @latestFile.FileName</p>
+        <p>Upload Date: @latestFile.UploadDate.ToString("g")</p>
+    </div>
+}
