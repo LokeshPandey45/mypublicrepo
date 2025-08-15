@@ -32,7 +32,7 @@ public class ProxyController : ControllerBase
 
             // Copy the response content and headers
             var content = await response.Content.ReadAsStringAsync();
-            return Content(content, response.Content.Headers.ContentType?.ToString());
+           // return Content(content, response.Content.Headers.ContentType?.ToString());
         }
         catch (HttpRequestException ex)
         {
