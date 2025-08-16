@@ -23,12 +23,12 @@ public class ProxyController : ControllerBase
         }
 
         // Decode the URL
-        var targetUrl = System.Net.WebUtility.UrlDecode(url);
+        //var targetUrl = System.Net.WebUtility.UrlDecode(url);
 
         try
         {
             // Forward the request to the target URL
-            var response = await _httpClient.GetAsync(targetUrl);
+            //var response = await _httpClient.GetAsync(targetUrl);
 
             // Copy the response content and headers
             var content = await response.Content.ReadAsStringAsync();
